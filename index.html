@@ -33,10 +33,12 @@
     <script type="text/javascript">
       $().ready(function() {
         jQuery.getJSON("https://api.github.com/repos/o0oradaro0o/RevertWeb/commits", function(data) {
-          $.each(data.commit, function(idx, commit) {
-            console.log(data)
-					$('#myTable').append('<tr><td>'+data.commit.committer.name+'</td><td>'+data.commit.message+'</td><td>'+data.ccommit.committer.date+'</td></tr>');
-				});
+          console.log(data[0].commit)
+          for (var i=0;i<10;i++)
+          {
+          var d = new Date(data[i].commit.committer.date);
+          $('#myTable').append('<tr><td>'+data[i].commit.committer.name+'</td><td>'+data[i].commit.message+'</td><td>'+d.toLocaleString()+'</td></tr>');
+          }
         
       });
     });
