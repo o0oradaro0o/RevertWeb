@@ -6,12 +6,8 @@
     <title>Unity WebGL Player | Revert</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
   </head>
   <body>
-
-
-
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas"></canvas>
       <div id="unity-loading-bar">
@@ -28,62 +24,7 @@
         <div id="unity-fullscreen-button"></div>
         <div id="unity-build-title">Revert</div>
       </div>
-    </div> 
-
-    <script type="text/javascript">
-      $().ready(function() {
-        jQuery.getJSON("https://api.github.com/repos/o0oradaro0o/RevertWeb/commits", function(data) {
-          console.log(data[0].commit)
-          for (var i=0;i<10;i++)
-          {
-          var d = new Date(data[i].commit.committer.date);
-          $('#myTable').append('<tr><td>'+data[i].commit.committer.name+'</td><td>'+data[i].commit.message+'</td><td>'+d.toLocaleString()+'</td></tr>');
-          }
-        
-      });
-    });
-      </script>
-<div id="commitHistory">
-    <h2>Recent Updates:</h2>
-    <div>
-        <table id="myTable">
-            <tbody><tr>
-                <th>Uploader</th>
-                <th>Change</th>
-                <th>Date</th>
-            </tr>
-        <tr><td>Lorne</td><td>add changes table</td><td>3/31/2021, 5:18:00 PM</td></tr><tr><td>Lorne</td><td>re-iupload with correct Ajax</td><td>3/31/2021, 4:24:53 PM</td></tr><tr><td>Lorne</td><td>test adding history to the site</td><td>3/31/2021, 4:20:51 PM</td></tr><tr><td>Lorne</td><td>no message</td><td>3/31/2021, 3:23:03 PM</td></tr><tr><td>Lorne</td><td>fixed some profile loading issues and added a new level, also some minor fixes to existing levels</td><td>3/31/2021, 2:20:26 PM</td></tr><tr><td>Lorne</td><td>add a new level, improve profile system, some level cleanup, powers gained now saved in profile</td><td>3/29/2021, 9:10:25 PM</td></tr><tr><td>Lorne</td><td>add end screen maybe</td><td>3/28/2021, 10:34:22 PM</td></tr><tr><td>Lorne</td><td>fix menu</td><td>3/28/2021, 8:03:11 PM</td></tr><tr><td>Lorne</td><td>fix some levels and jump</td><td>3/28/2021, 7:57:16 PM</td></tr><tr><td>Lorne</td><td>satined glass improvments</td><td>3/28/2021, 5:49:08 PM</td></tr></tbody>
-        </table>
-      </div>
     </div>
-      <style>
-        #commitHistory
-        {
-          position: fixed;
-          left: 0;
-          bottom: 0;
-          width: 100%;
-          height:300px;
-          overflow: scroll;
-        }
-          table {
-            
-            width: 100%;
-          }
-          th {
-              background: #f1f1f1;
-              font-weight: bold;
-              padding: 6px;
-          }
-          td {
-              padding: 6px;
-          }
-          tr:nth-child(even) {
-            background-color: #Dff1ff;
-          }
-          </style>
-
-
     <script>
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/RevertGitWeb.loader.js";
