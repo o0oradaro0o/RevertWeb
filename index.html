@@ -11,8 +11,13 @@
   <body>
 
 
-
-    <div id="unity-container" class="unity-desktop">
+    <div id="UnityBox">
+    <div id="unity-container" class="TopPart">
+        <div id="unity-footer">
+            <div id="unity-webgl-logo"></div>
+            <div id="unity-fullscreen-button"></div>
+            <div id="unity-build-title">Revert</div>
+          </div>
       <canvas id="unity-canvas"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
@@ -23,12 +28,9 @@
       <div id="unity-mobile-warning">
         WebGL builds are not supported on mobile devices.
       </div>
-      <div id="unity-footer">
-        <div id="unity-webgl-logo"></div>
-        <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">Revert</div>
-      </div>
+      
     </div> 
+  </div> 
 
     <script type="text/javascript">
       $().ready(function() {
@@ -62,8 +64,19 @@
           left: 0;
           bottom: 0;
           width: 100%;
-          height:150px;
+          height:30%;
           overflow: scroll;
+        }
+        #UnityBox
+        {
+          top: 0;
+          height:80%;
+        }
+        .TopPart
+        {
+          left: 25%;
+          top: 5%;
+          
         }
           table {
             
