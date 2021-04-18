@@ -3,7 +3,7 @@
   "description": "Revert game web site",
   "private": true,
   "scripts": {
-    "fix": "prettier --write '*.js' '_data/**/*'",
+    "fix": "prettier --write '*.js' '_data/**/*' '_includes/**/*'",
     "build": "eleventy"
   },
   "repository": {
@@ -19,5 +19,15 @@
     "feather-icons": "^4.28.0",
     "prettier": "^2.2.1",
     "simple-git": "^2.38.0"
+  },
+  "prettier": {
+    "overrides": [
+      {
+        "files": "*.hbs",
+        "options": {
+          "parser": "html"
+        }
+      }
+    ]
   }
 }
