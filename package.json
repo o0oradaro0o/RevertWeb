@@ -3,7 +3,7 @@
   "description": "Revert game web site",
   "private": true,
   "scripts": {
-    "fix": "prettier --write '*.js' '_data/**/*' '_includes/**/*'",
+    "fix": "prettier --write '*.{hbs,js}' '_data/**/*' '_includes/**/*'",
     "build": "eleventy"
   },
   "repository": {
