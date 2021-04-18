@@ -1,0 +1,16 @@
+{
+  "name": "revert",
+  "description": "Revert game web site",
+  "private": true,
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/o0oradaro0o/RevertWeb.git"
+  },
+  "bugs": {
+    "url": "https://github.com/o0oradaro0o/RevertWeb/issues"
+  },
+  "homepage": "https://revert-web.vercel.app",
+  "dependencies": {},
+  "devDependencies": {}
+}
