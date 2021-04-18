@@ -16,6 +16,7 @@
   "homepage": "https://revert-web.vercel.app",
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
+    "feather-icons": "^4.28.0",
     "prettier": "^2.2.1"
   }
 }
