@@ -3,7 +3,8 @@
   "description": "Revert game web site",
   "private": true,
   "scripts": {
-    "build": "eleventy" 
+    "fix": "prettier --write '*.js'",
+    "build": "eleventy"
   },
   "repository": {
     "type": "git",
@@ -14,6 +15,7 @@
   },
   "homepage": "https://revert-web.vercel.app",
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1"
+    "@11ty/eleventy": "^0.12.1",
+    "prettier": "^2.2.1"
   }
 }
