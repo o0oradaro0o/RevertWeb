@@ -4,7 +4,12 @@
   "private": true,
   "scripts": {
     "fix": "prettier --write '*.{hbs,js}' '_data/**/*' '_includes/**/*'",
-    "build": "eleventy"
+    "build": "run-s build:css build:site",
+    "start": "run-p dev:*",
+    "build:css": "NODE_ENV=production tailwind build -o tailwind.css",
+    "build:site": "NODE_ENV=production eleventy",
+    "dev:css": "tailwind build -o tailwind.css",
+    "dev:site": "eleventy --watch --serve --quiet"
   },
   "repository": {
     "type": "git",
@@ -17,8 +22,10 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
     "feather-icons": "^4.28.0",
+    "npm-run-all": "^4.1.5",
     "prettier": "^2.2.1",
-    "simple-git": "^2.38.0"
+    "simple-git": "^2.38.0",
+    "tailwindcss": "^2.1.1"
   },
   "prettier": {
     "overrides": [
