@@ -2,7 +2,9 @@
   "name": "revert",
   "description": "Revert game web site",
   "private": true,
-  "scripts": {},
+  "scripts": {
+    "build": "eleventy" 
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/o0oradaro0o/RevertWeb.git"
@@ -11,6 +13,7 @@
     "url": "https://github.com/o0oradaro0o/RevertWeb/issues"
   },
   "homepage": "https://revert-web.vercel.app",
-  "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1"
+  }
 }
