@@ -4,12 +4,8 @@
   "private": true,
   "scripts": {
     "fix": "prettier --write '*.{hbs,js}' '_data/**/*' '_includes/**/*'",
-    "build": "run-s build:css build:site",
-    "start": "run-p dev:*",
-    "build:css": "NODE_ENV=production tailwind build -o tailwind.css",
-    "build:site": "NODE_ENV=production eleventy",
-    "dev:css": "NODE_ENV=development tailwind build -o tailwind.css -w",
-    "dev:site": "NODE_ENV=development eleventy --watch --serve --quiet"
+    "build": "NODE_ENV=production eleventy",
+    "start": "NODE_ENV=development eleventy --watch --serve --quiet"
   },
   "repository": {
     "type": "git",
@@ -21,8 +17,9 @@
   "homepage": "https://revert-web.vercel.app",
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
+    "autoprefixer": "^10.2.5",
     "feather-icons": "^4.28.0",
-    "npm-run-all": "^4.1.5",
+    "postcss": "^8.2.10",
     "prettier": "^2.2.1",
     "simple-git": "^2.38.0",
     "tailwindcss": "^2.1.1"
