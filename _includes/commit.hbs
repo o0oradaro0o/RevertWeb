@@ -1,0 +1,27 @@
+<li class="space-y-1">
+  <h2>
+    <a
+      href="{{@root.site.repository}}/commit/{{hash}}"
+      class="text-2xl font-bold text-gray-900 hover:text-teal-500 focus:outline-none focus:underline"
+    >
+      {{message}}
+    </a>
+  </h2>
+  <dl class="flex space-x-4">
+    <div class="flex space-x-2 items-center">
+      <dt class="text-gray-400 h-4 w-4">
+        <span class="sr-only">Author</span>
+        {{{icon "user" 16}}}
+      </dt>
+      <dd class="text-gray-500">{{author_name}}</dd>
+    </div>
+    <div class="flex space-x-2 items-center">
+      <dt class="text-gray-400 h-4 w-4">
+        <span class="sr-only">Date</span>
+        {{{icon "calendar" 16}}}
+      </dt>
+      <dd class="text-gray-500"><time datetime="{{date}}">{{date date}}</time></dd>
+    </div>
+  </dl>
+  <p class="text-gray-700">{{body}}</p>
+</li>

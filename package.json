@@ -1,0 +1,37 @@
+{
+  "name": "revert",
+  "description": "Revert game web site",
+  "private": true,
+  "scripts": {
+    "fix": "prettier --write '*.{hbs,js}' '_data/**/*' '_includes/**/*'",
+    "build": "NODE_ENV=production eleventy",
+    "start": "NODE_ENV=development eleventy --watch --serve --quiet"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/o0oradaro0o/RevertWeb.git"
+  },
+  "bugs": {
+    "url": "https://github.com/o0oradaro0o/RevertWeb/issues"
+  },
+  "homepage": "https://revert-web.vercel.app",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "autoprefixer": "^10.2.5",
+    "feather-icons": "^4.28.0",
+    "postcss": "^8.2.10",
+    "prettier": "^2.2.1",
+    "simple-git": "^2.38.0",
+    "tailwindcss": "^2.1.1"
+  },
+  "prettier": {
+    "overrides": [
+      {
+        "files": "*.hbs",
+        "options": {
+          "parser": "html"
+        }
+      }
+    ]
+  }
+}
