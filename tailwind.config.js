@@ -1,3 +1,4 @@
+const colors = require("tailwindcss/colors");
 const path = require("path");
 
 module.exports = {
@@ -5,7 +6,12 @@ module.exports = {
   purge: ["*.hbs", path.join("_includes", "**", "*.hbs")],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        gray: colors.blueGray,
+        teal: colors.teal,
+      },
+    },
   },
   variants: {
     extend: {},

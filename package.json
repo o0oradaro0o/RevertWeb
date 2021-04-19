@@ -8,8 +8,8 @@
     "start": "run-p dev:*",
     "build:css": "NODE_ENV=production tailwind build -o tailwind.css",
     "build:site": "NODE_ENV=production eleventy",
-    "dev:css": "tailwind build -o tailwind.css",
-    "dev:site": "eleventy --watch --serve --quiet"
+    "dev:css": "NODE_ENV=development tailwind build -o tailwind.css -w",
+    "dev:site": "NODE_ENV=development eleventy --watch --serve --quiet"
   },
   "repository": {
     "type": "git",

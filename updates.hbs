@@ -4,7 +4,11 @@ title: Revert Updates
 description: Recent updates to Revert
 ---
 
-<h1>Revert Updates</h1>
-<ul>
-  {{#each commits.all}} {{>commit this}} {{/each}}
-</ul>
+<main class="px-4 py-6 mx-auto max-w-prose">
+  <header class="pb-8">
+    <h1 class="text-gray-900 text-4xl font-extrabold">{{title}}</h1>
+  </header>
+  <ul>
+    {{#each commits.all}} {{>commit this}} {{/each}}
+  </ul>
+</main>
