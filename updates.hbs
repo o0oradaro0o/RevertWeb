@@ -1,0 +1,14 @@
+---
+layout: base
+title: Revert Updates
+description: Recent updates to Revert
+---
+
+<main class="px-4 py-6 mx-auto max-w-prose">
+  <header class="pb-8">
+    <h1 class="text-gray-900 text-4xl font-extrabold">{{title}}</h1>
+  </header>
+  <ul class="space-y-6">
+    {{#each commits.all}} {{>commit this}} {{/each}}
+  </ul>
+</main>
