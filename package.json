@@ -21,7 +21,7 @@
     "feather-icons": "^4.28.0",
     "postcss": "^8.2.10",
     "prettier": "^2.2.1",
-    "simple-git": "^2.38.0",
+    "simple-git": "^3.5.0",
     "tailwindcss": "^2.1.1"
   },
   "prettier": {
